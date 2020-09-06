@@ -14,3 +14,5 @@ var sameArrays = function(array1,array2){
 	console.log(x);
 }
 
+sameArrays ([1,3,4], [2,3,6])
+
