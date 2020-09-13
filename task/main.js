@@ -1,7 +1,7 @@
 let money = +prompt("Ваш бюджет на месяц?");
 let time = prompt("Введите дату в формате YYYY-MM-DD");
 let appData = {
-    бюджет: money,
+    budjet: money,
     timeData: time,
     expenses: {
     },
@@ -9,9 +9,20 @@ let appData = {
     income:[],
     savings: false    
 }
-appData.expenses[prompt("Введите обязательную статью расходов в этом месяце")] = +prompt("Во сколько обойдется?");
-appData.expenses[prompt("Введите обязательную статью расходов в этом месяце")] = +prompt("Во сколько обойдется?");
-let oneDay = money/30;
-alert ("ваш бюджет на день составляет"  + oneDay)
+
+for (let i = 0; i<2; i++) {
+    let q = prompt("Введите обязательную статью расходов в этом месяце");
+    let a = prompt("Во сколько обойдется?");
+
+    if( typeof(q) === 'string' && typeof(q) != null && typeof(a) != null && q != "" && a!=""
+    && q.length < 50) {
+        console.log("done");
+        appData.expenses[q] = a;
+    }
+
+}
+appData.moneyPerDay = appData.budjet / 30;
+
+alert ("ваш бюджет на день составляет "  + appData.moneyPerDay)
 
 console.log(appData);
