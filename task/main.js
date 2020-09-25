@@ -21,8 +21,6 @@ for (let i = 0; i<2; i++) {
     }
 
 }
-appData.moneyPerDay = appData.budjet / 30;
 
-alert ("ваш бюджет на день составляет "  + appData.moneyPerDay)
 
 console.log(appData);
